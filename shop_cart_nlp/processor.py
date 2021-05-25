@@ -186,8 +186,6 @@ class Processor:
         :return: quantity in array
         """
         quants = qparser.parse(position)
-        # sanity check
-        # print(str(quants[0].value) + " unit: " + str(quants[0].unit) if quants else "No quants")
         return quants if quants else [Quantity(1, self.dimensionless)]
 
     def calculate_count(self, product, quants):
